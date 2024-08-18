@@ -1,4 +1,3 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,8 +15,8 @@ public class TestCardForm {
 
     @BeforeAll
     static void setUpAll() {
-
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver");
+        //WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
